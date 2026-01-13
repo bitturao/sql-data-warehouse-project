@@ -1,0 +1,118 @@
+In this project we are doing 
+Pull Extraction
+
+Extraction Type: Full Extraction
+
+Extraction Technique: File parsing
+
+Transformation
+
+Batch Processing
+
+Full Load: Truncate & Insert
+
+SCD1
+
+## Building a Datawarehouse
+
+### Objective
+
+### Specifications
+
+Data Sources : ERP and CRM csv files
+
+Data Quality; cleanse
+
+Integration: combine sources
+
+Scope
+
+Documentation
+
+# Separation of Concerns:
+
+Dividing the complex into small modules and not duplicates
+
+![image.png](attachment:eafa0e3c-c460-4cd3-9f45-2ade2f05966c:image.png)
+
+## Data Architecture
+
+![image.png](attachment:6e0a78e5-5171-443b-a846-c56228ca25dd:image.png)
+
+### Data Warehouse
+
+Inmon: Stage → EDW→ Data Marts
+
+Kimnaff: Stage→ Data Marts
+
+Data Vault: Stage→ Raw Vault →Business Vault→ Data Marts
+
+Medallion Archi : Bronze→Silver→Gold
+
+![image.png](attachment:dac5ac45-091c-478e-8379-150f5e71132f:image.png)
+
+Bronze Layer :
+
+Def: Raw, Unprocessed data as is from sources
+
+Obj:  Tracebility & Debugging
+
+obj Type: Tables
+
+Load Method : Full Load( Truncate & insert)
+
+Target Audiences: Data Engineers
+
+![image.png](attachment:0336d474-e3c7-438e-87db-53d28d157f30:image.png)
+
+### DDL: Data Definition Language
+
+Silver layer:
+
+Def: Clean & standardized data
+
+Obj: prepare Data for Analysis
+
+type: Tables
+
+Load Method: Full Load( Truncate & insert)
+
+Data Transformation: Data Cleaning, Data Standardization, Data Normalization, Derived Columns, Data Enrichment
+
+TA: Data Engineers, Data Analysts
+
+![image.png](attachment:d3eb55cd-2664-4e48-8e97-0757ebf76b4d:5f5939da-b50f-439b-b3b6-d21c2be63c99.png)
+
+Gold Layer:
+
+Def: Business - Ready data
+
+obj: Provide data to be consumed for reporting & analytics
+
+Type: Views
+
+Data Transformation:  Data Integration, Data Aggregation, Business Logic & Rules 
+
+Data Modeling: Start Schema, Aggregated Objects, Flat Tables
+
+TA: Data Analysts, Business Users
+
+![image.png](attachment:8bbf03ce-3d56-42b4-946f-d671b4d42aeb:3c57c660-740e-41f7-a40e-74a8e61c71c1.png)
+
+Star Shema
+
+SnowFlake Schema
+
+### Surrogate Key
+
+# Data Flow
+
+![image.png](attachment:f69ded9a-5b09-4bc3-9750-5f102e7a26f8:image.png)
+
+# Data Integration
+
+![image.png](attachment:ff9ea54b-3d82-4066-bdff-a772f48d0ae0:image.png)
+
+# Data Model
+
+![image.png](attachment:0fe7b6c6-a97e-4bb5-b31e-f5c851cce384:image.png)
